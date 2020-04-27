@@ -1,5 +1,5 @@
 const redis = require("redis"),
-    client = redis.createClient();
+    client = redis.createClient(6399,'39.96.91.185',{auth_pass: 'fuck@2020xyz#%123'});
 
 client.on("error", function (err) {
     console.log("Error " + err);
@@ -19,7 +19,7 @@ function getCacheById(key) {
             resv(reply);
         });
     })
-    
+
 }
 
 function updateCache(key, value) {

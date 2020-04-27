@@ -1,7 +1,7 @@
 module.exports = {
   db: {
-    servername: 'localhost',
-    port: '27017',
+    servername: '39.96.91.185',
+    port: '27037',
     DATABASE: 'vuechat'
   }
 }
