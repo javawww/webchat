@@ -4,6 +4,7 @@
       <form action="" name="form2">
         <div class="context-logo">
           <img src="https://s3.qiufengh.com/webchat/webchat-logo-160.png" alt="">
+          <h3>{{type === 'login' ? '[登陆]' : '[注册]' }}</h3>
         </div>
         <Input v-model="username" type="text" placeholder="输入账号"/>
         <br/>
@@ -16,7 +17,7 @@
       <div class="bottom-wraper">
         <mu-flex align-items="center">
           <mu-flex justify-content="center" fill>
-            <router-link :to="{ name: type === 'login' ? 'Register' : 'Login'}"><div class="tip-user">{{type === 'login' ? '注册帐号' : '去登录' }}</div></router-link>
+            <router-link :to="{ name: type === 'login' ? 'Register' : 'Login'}"><div class="tip-user">{{type === 'login' ? '立即注册' : '立即登录' }}</div></router-link>
           </mu-flex>
           <mu-flex justify-content="center">|</mu-flex>
           <mu-flex justify-content="center" fill><div class="tip-user">忘记密码</div></mu-flex>
@@ -24,7 +25,7 @@
         <div class="bottom-arguemnt">
           登录即可代表同意协议
         </div>
-        <p style="text-align: center"><a href="javascript:;" target="_blank">浙ICP备16040413号-1</a></p>
+        <p style="text-align: center"><a href="javascript:;" target="_blank">深ICP备16040990号-0</a></p>
       </div>
 
     </div>
@@ -76,7 +77,7 @@ export default {
           data.src = src;
           res = await this.$store.dispatch("registerSubmit", data);
         }
-		
+
         if (res.status === "success") {
           Toast({
             content: res.data.data,

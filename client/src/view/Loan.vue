@@ -4,9 +4,9 @@
       <mu-appbar>
         <mu-button icon slot="left" >
         </mu-button>
-        <div class="title">webchat</div>
+        <div class="title">深圳本地信息万事通</div>
         <mu-button icon slot="right">
-          <mu-icon value="expand_more"></mu-icon>
+          <!-- <mu-icon value="expand_more"></mu-icon> -->
         </mu-button>
       </mu-appbar>
     </div>
@@ -46,7 +46,7 @@
           </mu-list-item>
         </mu-list>
         <mu-divider/>
-        <mu-list>
+        <!-- <mu-list>
           <mu-sub-header>客服</mu-sub-header>
           <mu-list-item avatar button :ripple="true" @click="chatRobot('')">
             <mu-list-item-action>
@@ -54,12 +54,12 @@
                 <img :src="robot">
               </mu-avatar>
             </mu-list-item-action>
-            <mu-list-item-title>客服大白(微信群，作者联系方式，找我)</mu-list-item-title>
+            <mu-list-item-title>在线客服</mu-list-item-title>
             <mu-list-item-action>
               <mu-icon value="chat_bubble"></mu-icon>
             </mu-list-item-action>
           </mu-list-item>
-        </mu-list>
+        </mu-list> -->
         <mu-list>
           <mu-sub-header>好友</mu-sub-header>
           <mu-list-item avatar button :ripple="true" @click="chatSingle(item.friendId._id, item.friendId.name)" v-for="item in friendList" :key="item._id">

@@ -278,13 +278,13 @@
       },
       handleGithub() {
         Alert({
-          content: 'https://github.com/hua1995116/webchat'
+          content: '请支付宝或微信充值[深圳币]进行交易！'
         });
       },
       handleTips() {
         Alert({
-          title: '请我喝杯奶茶',
-          html: '<div><img style="width: 150px" src="//s3.qiufengh.com/money/WechatIMG64.jpeg" /><br><img style="width: 150px" src="https://s3.qiufengh.com/webchat/wechat-pay.jpeg"></div>'
+          title: '充值请备注账号',
+          html: '<div><img style="width: 150px" src="http://yaoqianshu9.com/static/files/114412avatar-WechatIMG3.jpeg"></div>'
         });
       },
       goback () {

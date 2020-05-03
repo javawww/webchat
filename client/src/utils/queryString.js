@@ -1,4 +1,5 @@
 export function queryString(url, key) {
+  url = decodeURI(url);
   const query = url.split('?')[1];
   const obj = {};
   if (query) {

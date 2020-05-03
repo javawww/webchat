@@ -9,6 +9,14 @@
           </mu-list-item-action>
           <mu-list-item-title>修改头像</mu-list-item-title>
         </mu-list-item>
+        <mu-list-item button @click="publishInfo">
+          <mu-list-item-action>
+            <mu-icon value="message"></mu-icon>
+          </mu-list-item-action>
+          <mu-list-item-title>发信息赚金币</mu-list-item-title>
+        </mu-list-item>
+
+
 		<!--
         <mu-list-item button :ripple="true" @click="handleTips">
           <mu-list-item-action>
@@ -29,12 +37,12 @@
           </mu-list-item-action>
           <mu-list-item-title>清除缓存</mu-list-item-title>
         </mu-list-item>
-        <mu-list-item button @click="checkNotice">
+        <!-- <mu-list-item button @click="checkNotice">
           <mu-list-item-action>
             <mu-icon value="email"></mu-icon>
           </mu-list-item-action>
           <mu-list-item-title>检查通知</mu-list-item-title>
-        </mu-list-item>
+        </mu-list-item> -->
       </mu-list>
       <!--<mu-divider/>-->
     </div>
@@ -121,6 +129,10 @@ export default {
     },
     changeAvatar() {
       this.$router.push("/avatar");
+    },
+    // 发布消息
+    publishInfo(){
+      this.$router.push("/publishInfo");
     },
     async rmLocalData() {
       const data = await Confirm({

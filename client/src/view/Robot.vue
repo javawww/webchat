@@ -6,7 +6,7 @@
           <mu-button icon slot="left" @click="goback">
             <mu-icon value="chevron_left"></mu-icon>
           </mu-button>
-          大白客服
+          在线客服
           <mu-button icon slot="right">
             <mu-icon value="expand_more"></mu-icon>
           </mu-button>

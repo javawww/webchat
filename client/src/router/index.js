@@ -7,6 +7,7 @@ import Register from '../view/Signin/Register';
 import Login from '../view/Signin/Login';
 import Chat from '../view/Chat';
 import Avatar from '../view/Avatar';
+import PublishInfo from '../view/Info/PublishInfo';
 import GroupDetail from '../view/GroupDetail';
 import PersonDetail from '../view/PersonDetail';
 import GroupMember from '../view/GroupMember';
@@ -81,6 +82,11 @@ const router = new Router({
               path: '',
               name: 'Home',
               component: Home,
+            },
+            {
+              path: '/publishInfo',
+              name: 'publishInfo',
+              component: PublishInfo
             },
           ]
         },
