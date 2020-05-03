@@ -98,10 +98,15 @@ router.post('/uploadimg', upload.single('file'),  async (req, res, next) => {
       const staticUrl = path.join('./static_temp', filename);
       let img = '';
       if(process.env.NODE_ENV === 'production') {
-        await qnUpload([staticUrl]);
+		   // 兼容windows
+        fileTool.copySync('./static_temp', './dist/static/files');
+        rmDirFiles('./static_temp');
+        img = path.join(urlPath, filename);
+		
+      //  await qnUpload([staticUrl]);
         // 因为是服务器运行可以直接写脚本
-        await cmder(`rm -rf ./static_temp/* `);
-        img =`//s3.qiufengh.com/webchat/` + filename;
+      //  await cmder(`rm -rf ./static_temp/* `);
+      //  img =`//s3.qiufengh.com/webchat/` + filename;
       } else {
         // 兼容windows
         fileTool.copySync('./static_temp', './dist/static/files');
@@ -133,10 +138,14 @@ router.post('/avatar', uploadAvatar.single('file'),  async (req, res, next) => {
 
       let img = '';
       if(process.env.NODE_ENV === 'production') {
-        await qnUpload([staticUrl]);
+		  fileTool.copySync('./static_temp', './dist/static/files');
+        rmDirFiles('./static_temp');
+        img = path.join(urlPath, filename);
+		
+        //await qnUpload([staticUrl]);
         // 因为是服务器运行可以直接写脚本
-        await cmder(`rm -rf ./static_temp/* `);
-        img =`//s3.qiufengh.com/webchat/` + filename;
+        //await cmder(`rm -rf ./static_temp/* `);
+        //img =`//s3.qiufengh.com/webchat/` + filename;
       } else {
         // 兼容windows
         fileTool.copySync('./static_temp', './dist/static/files');
