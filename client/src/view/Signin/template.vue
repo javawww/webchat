@@ -24,7 +24,7 @@
         <div class="bottom-arguemnt">
           登录即可代表同意协议
         </div>
-        <p style="text-align: center"><a href="http://beian.miit.gov.cn" target="_blank">浙ICP备16040413号-1</a></p>
+        <p style="text-align: center"><a href="javascript:;" target="_blank">浙ICP备16040413号-1</a></p>
       </div>
 
     </div>
@@ -67,13 +67,16 @@ export default {
           password: password
         };
         let res;
+		console.dir("log console .....")
         if(this.type === 'login') {
           res = await this.$store.dispatch("loginSubmit", data);
+		  console.log(res)
         } else {
           const src = `//s3.qiufengh.com/avatar/${Math.ceil(Math.random() * 272)}.jpeg`;
           data.src = src;
           res = await this.$store.dispatch("registerSubmit", data);
         }
+		
         if (res.status === "success") {
           Toast({
             content: res.data.data,

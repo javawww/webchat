@@ -1,4 +1,4 @@
-var port = process.env.PORT || 9090;
+var port = process.env.PORT || 9999;
 var env = process.env.NODE_ENV || 'development'
 var express = require('express');
 var path = require('path');
@@ -11,7 +11,7 @@ var bodyParser = require('body-parser')
 // 日志
 var log4js = require('./server_modules/log.js').log4js;
 var logger = require('./server_modules/log.js').logger;
-
+logger.info("start ......");
 // 数据库
 var mongoose = require('./server_modules/mongodb.js');
 
@@ -95,5 +95,6 @@ if ('development' === app.get('env')) {
 }
 
 var server = app.listen(port)
+logger.info("end ......");
 // websocket
 require('./server_modules/websocket.js')(server);
