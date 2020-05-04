@@ -20,22 +20,22 @@ module.exports = {
       port: 9099,
       proxy: { // https://cli.vuejs.org/zh/config/#devserver-proxy
         '/socket.io': {
-          target: 'http://103.123.160.113:9999',
+          target: 'http://fish.yaoqianshu9.com',
           ws: true,
           changeOrigin: true
         },
         '/sockjs-node': {
-          target: 'http://103.123.160.113:9999',
+          target: 'http://fish.yaoqianshu9.com',
           ws: false,
           changeOrigin: true
         },
         '/api': {
-          target: 'http://103.123.160.113:9999',
+          target: 'http://fish.yaoqianshu9.com',
           ws: false,
           changeOrigin: true
         },
         '/static': {
-          target: 'http://103.123.160.113:9999',
+          target: 'http://www.yaoqianshu9.com',
           ws: false,
           changeOrigin: true
         }
