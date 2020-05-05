@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="search-wrapper">
     <SearchBar disabled="true" @submit="handleSearch"></SearchBar>
     <div>
-      <mu-sub-header>vvvvip</mu-sub-header>
+      <mu-sub-header>文明交流/共筑美好社区</mu-sub-header>
       <mu-chip class="list-chip vip-chip" color="#282b2d" v-for="item in vipUserList" :key="item._id" @click="lookInfo({_id: item.name})">
         <!-- icon-huangguan -->
         <mu-avatar :size="32">
           <img :src="item.src">
         </mu-avatar>
-        <img class="vip-img" src="https://s3.qiufengh.com/webchat/vvvip.png" />
+        <img class="vip-img" src="@/assets/vvvip.png" />
         {{item.name > 10 ? `${item.name.slice(0,10)}...` : item.name}}
       </mu-chip>
 
@@ -20,6 +20,35 @@
         {{item._id.length > 10 ? `${item._id.slice(0,10)}...` : item._id}}
       </mu-chip>
     </div>
+    <mu-divider shallow-inset></mu-divider>
+    <mu-row>
+      <mu-col span="2">
+        <mu-avatar>
+          <img src="http://s3.qiufengh.com/avatar/133.jpeg">
+        </mu-avatar>
+      </mu-col>
+      <mu-col span="10">
+        <mu-sub-header>飞翔的小鸟</mu-sub-header>
+      </mu-col>
+    </mu-row>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好</div>
+    <div>大家好888</div>
+    <div>大家好888</div>
+    <div>大家好888</div>
     <div style="height:80px"></div>
     <Bottom></Bottom>
   </div>
@@ -81,7 +110,9 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-
+.search-wrapper{
+  overflow:scroll;
+}
 .logout {
   margin: 0 20px;
 }

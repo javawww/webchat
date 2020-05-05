@@ -1,4 +1,6 @@
 const path = require('path');
+const TARGET_API = "http://127.0.0.1:9999"
+// const TARGET_API = "http://fish.yaoqianshu9.com"
 function resolve (dir) {
     return path.join(__dirname, dir)
 }
@@ -20,17 +22,17 @@ module.exports = {
       port: 9099,
       proxy: { // https://cli.vuejs.org/zh/config/#devserver-proxy
         '/socket.io': {
-          target: 'http://fish.yaoqianshu9.com',
+          target: TARGET_API,
           ws: true,
           changeOrigin: true
         },
         '/sockjs-node': {
-          target: 'http://fish.yaoqianshu9.com',
+          target: TARGET_API,
           ws: false,
           changeOrigin: true
         },
         '/api': {
-          target: 'http://fish.yaoqianshu9.com',
+          target: TARGET_API,
           ws: false,
           changeOrigin: true
         },

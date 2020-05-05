@@ -4,7 +4,7 @@
       <mu-appbar>
         <mu-button icon slot="left" >
         </mu-button>
-        <div class="title">深圳本地信息万事通</div>
+        <div class="title">深圳最真实交友社区</div>
         <mu-button icon slot="right">
           <!-- <mu-icon value="expand_more"></mu-icon> -->
         </mu-button>
@@ -13,7 +13,7 @@
     <div class="chat-list">
       <mu-paper>
         <mu-list>
-          <mu-sub-header>最近聊天记录</mu-sub-header>
+          <mu-sub-header>平台聊天室</mu-sub-header>
           <mu-list-item avatar button :ripple="true" @click="chatwindow('room1')">
             <mu-list-item-action>
               <div class="avatar">
